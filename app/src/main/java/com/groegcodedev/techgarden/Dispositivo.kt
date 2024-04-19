@@ -5,24 +5,25 @@ open class Dispositivo(
     val marca: String,
     val modelo: String,
     var estado: Estado,
+    val especificaciones: Especificaciones
 ) {
 
     // Metodo para encencer dispositivo
-    open fun encender() {
+    open fun encender(): String {
         estado = Estado.ENCENDIDO
-        println("$marca $modelo ha sido encendido.")
+        return "$marca $modelo ha sido encendido."
     }
 
     // Metodo para apagar dispositivo
-    open fun apagar() {
+    open fun apagar(): String {
         estado = Estado.APAGADO
-        println("$marca $modelo ha sido apagado.")
+        return "$marca $modelo ha sido apagado."
     }
 
     // Metodo para poner dispositivo en espera
-    open fun espera() {
+    open fun espera(): String {
         estado = Estado.EN_ESPERA
-        println("$marca $modelo esta en modo espera.")
+        return "$marca $modelo esta en modo espera."
     }
 
     // Metodo __string__ para devolver informacion del dispositivo
@@ -32,6 +33,6 @@ open class Dispositivo(
 
     // Metofo que muestra detalles del dispositivo
     open fun mostrarDetalle(): String {
-        return "Dispositivo: $marca $modelo, Estado: $estado"
+        return "Dispositivo: $marca $modelo, \nEstado: $estado"
     }
 }
