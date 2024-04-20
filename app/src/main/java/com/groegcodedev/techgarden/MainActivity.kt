@@ -14,6 +14,7 @@ class MainActivity : AppCompatActivity() {
 
         binding.message0.text = "Mod Groeg Fausto Dev"
 
+
         /*val telefono1: Dispositivo = SmartPhone("Samsung", "Galaxy S24+", Estado.ENCENDIDO, false)
         val pc1: Dispositivo = Ordenador("Asus", "ROG Strix", Estado.EN_ESPERA, "i13900K", 64, 2, "Geforce RTX4090", true)
         val tableta1: Dispositivo = Tableta("iPad", "Pro 12", Estado.APAGADO, 12.9)
@@ -41,14 +42,16 @@ class MainActivity : AppCompatActivity() {
             "Windows 11 Pro"
         )
         val ordenador1: Dispositivo = Ordenador("Asus", "ROG", Estado.ENCENDIDO, especificacionesOrdenador1)
-        binding.message1.text = "Ordenador #1:\n\nCPU: ${ordenador1.especificaciones.tipoCPU}"+
+        /*binding.message1.text = "Ordenador #1:\n\nCPU: ${ordenador1.especificaciones.tipoCPU}"+
                                 "\nRAM: ${ordenador1.especificaciones.tamañoRAM} GB"+
                                 "\nAlmacenamiento: M.2 Sam ${ordenador1.especificaciones.tamañoAlmacenamiento} TB"+
                                 "\nMainboard: ${ordenador1.especificaciones.tarjetaMadre}"+
                                 "\nTarjeta Grafica: ${ordenador1.especificaciones.tarjetaGrafica}"+
                                 "\nEnfiramiento: ${ordenador1.especificaciones.refrigeracion}"+
                                 "\nAlimentacion: ${ordenador1.especificaciones.fuenteAlimentacion}"+
-                                "\nGabinete: ${ordenador1.especificaciones.gabinete}\n"
+                                "\nGabinete: ${ordenador1.especificaciones.gabinete}\n"*/
+        RegistroDispositivo.agregarDispositivo(ordenador1)
+
 
         val especificacionesCelular1 = Especificaciones(
             "Qualcomm Snapdragon 8 Gen 3",
@@ -69,10 +72,10 @@ class MainActivity : AppCompatActivity() {
             "Android 14 basado en One UI 6.1"
         )
         val celular1: Dispositivo = SmartPhone("Samsung", "Galaxy S24 Ultra", Estado.NUEVO, especificacionesCelular1, true)
-        binding.message2.text = celular1.mostrarDetalle()
+        RegistroDispositivo.agregarDispositivo(celular1)
+        //binding.message2.text = celular1.mostrarDetalle()
 
-
-       /*val especificacionesTableta1 = Especificaciones(
+        val especificacionesTableta1 = Especificaciones(
             "M2 de Apple",
             16,
             2,
@@ -91,13 +94,15 @@ class MainActivity : AppCompatActivity() {
             "iPadOS 17.4"
         )
         val tableta1: Dispositivo = Tableta("Apple", "iPad Pro", Estado.APAGADO, especificacionesCelular1, true, 12.9)
-        binding.message3.text = "\nTableta #1:\n\nCPU: ${tableta1.especificaciones.tipoCPU}"+
+        /*binding.message3.text = "\nTableta #1:\n\nCPU: ${tableta1.especificaciones.tipoCPU}"+
                                 "\nRAM: ${tableta1.especificaciones.tamañoRAM} GB"+
                                 "\nAlmacenamiento: ${tableta1.especificaciones.tamañoAlmacenamiento} TB"+
                                 "\nColor: ${tableta1.especificaciones.colorDispositivo}"+
                                 "\nBluetooht: ${tableta1.especificaciones.conexionBluetooth}"+
                                 "\nWiFi: ${tableta1.especificaciones.conexionWifi}"+
                                 "\nOs: ${tableta1.especificaciones.OS}"*/
+        RegistroDispositivo.agregarDispositivo(tableta1)
+
 
 
 
